@@ -1,9 +1,22 @@
 .container {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: center;
 }
-.grid {
-  padding: 30px;
-  background-color: red;
-  border: black solid;
+
+#grid {
+  border: 1px solid #a8dadc;
+  border-radius: 4px;
+  width: 591px;
+  height: 591px;
+  position: relative;
+  display: flex;
+  flex-flow: row wrap;
+  flex-shrink: 0;
+  justify-content: space-around;
+}
+
+.box {
+  width: 30px;
+  height: 30px;
+  border: solid rgb(206, 200, 200);
 }
