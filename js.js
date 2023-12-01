@@ -9,22 +9,28 @@ function gridSize(size) {
     container.appendChild(div);
   }
 }
+gridSize(8);
 
 container.addEventListener("click", (e) => {
   if (e.target.matches(".box")) {
     e.target.style.backgroundColor = "red";
   }
 });
-//
 
-// function gridSize(a) {
-//   gridSize = a ** 2;
-//   return gridSize;
-// }
-// function flexBasis(a) {
-//   flexBasis = 100 / a;
-//   return flexBasis;
-// }
-let size = prompt("asd");
+const button = document.getElementById("Grid-size");
 
-gridSize(size);
+function removeAllChildNodes(parent) {
+  while (parent.firstChild) {
+    parent.removeChild(parent.firstChild);
+  }
+}
+
+button.addEventListener("click", () => {
+  let a = prompt("type grid's size");
+  if (a <= 100) {
+    removeAllChildNodes(container);
+    gridSize(a);
+  } else {
+    alert("number can't exceed 100");
+  }
+});
