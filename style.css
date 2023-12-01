@@ -1,24 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+}
 .container {
   display: flex;
   justify-content: center;
 }
 
 #grid {
-  border: 1px solid #a8dadc;
-  border-radius: 4px;
-  width: 591px;
-  height: 591px;
-  position: relative;
+  width: 42rem;
+  height: 42rem;
   display: flex;
   flex-flow: row wrap;
-  flex-shrink: 0;
+  border: solid black;
   justify-content: space-around;
+  position: relative;
 }
 
 .box {
-  width: 30px;
-  height: 30px;
-  border: solid rgb(206, 200, 200);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid black 1px;
 }
 .menu {
   padding-right: 20px;
