@@ -20,3 +20,11 @@
   height: 30px;
   border: solid rgb(206, 200, 200);
 }
+.menu {
+  padding-right: 20px;
+  font-weight: 700;
+  font-size: 24px;
+}
+h1 {
+  text-align: center;
+}
