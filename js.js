@@ -1,5 +1,7 @@
 const container = document.getElementById("grid");
 const box = document.getElementsByClassName("box");
+const rainbow = document.getElementById("rainbow");
+const black = document.getElementById("black");
 
 function gridSize(size) {
   for (let i = 0; i < size ** 2; i++) {
@@ -11,11 +13,17 @@ function gridSize(size) {
 }
 gridSize(8);
 
-container.addEventListener("click", (e) => {
+container.addEventListener("mouseover", (e) => {
   if (e.target.matches(".box")) {
-    e.target.style.backgroundColor = "red";
+    e.target.style.backgroundColor = randomColors();
   }
 });
+
+// container.addEventListener("mouseover", (e) => {
+//   if (e.target.matches(".box")) {
+//     e.target.style.backgroundColor = "black";
+//   }
+// });
 
 const button = document.getElementById("Grid-size");
 
@@ -34,3 +42,8 @@ button.addEventListener("click", () => {
     alert("number can't exceed 100");
   }
 });
+function randomColors() {
+  return (
+    "#" + (randomColor = Math.floor(Math.random() * 16777215).toString(16))
+  );
+}
