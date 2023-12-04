@@ -4,6 +4,7 @@
 body {
   margin: 0px;
   padding: 0px;
+  font-family: "Shantell Sans", cursive;
   background-color: rgb(138, 45, 59);
 }
 .container {
@@ -20,7 +21,6 @@ body {
   justify-content: space-around;
   position: relative;
   background-color: white;
-  border: solid 40px red;
   border-radius: 20px;
 }
 
@@ -41,12 +41,13 @@ body {
 }
 h1 {
   text-align: center;
+  font-size: 38px;
 }
 #Grid-size,
 #rainbow,
 #black,
 #eraser {
-  margin-top: 20px;
+  margin-top: 10px;
   padding: 8px;
   width: 140px;
   border-radius: 8px;
@@ -69,4 +70,20 @@ h1 {
     #fc4f4f 80%,
     #00c0ff 100%
   );
+}
+.grid-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  border-radius: 8px;
+  padding: 12px;
+}
+.Grid-size {
+  display: flex;
+}
+input {
+  border-radius: 12px;
+  display: flex;
 }

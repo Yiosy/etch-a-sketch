@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@0,400;1,700&display=swap"
+      rel="stylesheet"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
@@ -10,13 +16,21 @@
   <body>
     <h1>ETCH A SKETCH</h1>
     <div class="menu">
-      <button id="Grid-size">Pixel size</button>
       <button id="rainbow">Rainbow</button>
       <button id="black">Black</button>
       <button id="eraser">Eraser</button>
     </div>
     <div class="container">
       <div id="grid"></div>
+    </div>
+    <div class="grid-input">
+      <input
+        type="number"
+        name="Grid-size"
+        id="grid-input"
+        placeholder="enter your desired grid size"
+      />
+      <button id="Grid-size">Confirm</button>
     </div>
   </body>
 </html>

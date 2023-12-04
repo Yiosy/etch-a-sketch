@@ -3,6 +3,18 @@ const box = document.getElementsByClassName("box");
 const rainbow = document.getElementById("rainbow");
 const black = document.getElementById("black");
 const eraser = document.getElementById("eraser");
+const input = document.querySelector("input");
+const button = document.getElementById("Grid-size");
+
+button.addEventListener("click", () => {
+  if (input.value <= 100 && input.value > 0) {
+    removeAllChildNodes(container);
+    gridSize(input.value);
+  } else {
+    alert("number can't exceed 100 or be below 0");
+  }
+});
+
 let color = "black";
 function gridSize(size) {
   for (let i = 0; i < size ** 2; i++) {
@@ -29,23 +41,21 @@ container.addEventListener("mouseover", (e) => {
   }
 });
 
-const button = document.getElementById("Grid-size");
-
 function removeAllChildNodes(parent) {
   while (parent.firstChild) {
     parent.removeChild(parent.firstChild);
   }
 }
 
-button.addEventListener("click", () => {
-  let a = prompt("type grid's size");
-  if (a <= 100 && a > 0) {
-    removeAllChildNodes(container);
-    gridSize(a);
-  } else {
-    alert("number can't exceed 100 or be below 0");
-  }
-});
+// button.addEventListener("click", () => {
+//   let a = prompt("type grid's size");
+//   if (a <= 100 && a > 0) {
+//     removeAllChildNodes(container);
+//     gridSize(a);
+//   } else {
+//     alert("number can't exceed 100 or be below 0");
+//   }
+// });
 function randomColors() {
   return (
     "#" + (randomColor = Math.floor(Math.random() * 16777215).toString(16))
