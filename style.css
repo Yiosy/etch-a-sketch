@@ -4,6 +4,7 @@
 body {
   margin: 0px;
   padding: 0px;
+  background-color: rgb(138, 45, 59);
 }
 .container {
   display: flex;
@@ -18,30 +19,54 @@ body {
   border: solid black;
   justify-content: space-around;
   position: relative;
+  background-color: white;
+  border: solid 40px red;
+  border-radius: 20px;
 }
 
 .box {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: solid black 1px;
 }
 .menu {
   padding-right: 20px;
   font-weight: 700;
   font-size: 24px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: center;
+  padding: 15px;
 }
 h1 {
   text-align: center;
 }
 #Grid-size,
 #rainbow,
-#black {
+#black,
+#eraser {
   margin-top: 20px;
   padding: 8px;
-  width: 80px;
+  width: 140px;
   border-radius: 8px;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin: 18px;
+}
+#eraser {
+  background-color: lightpink;
+}
+#black {
+  background-color: black;
+  color: white;
+}
+#rainbow {
+  background-image: linear-gradient(
+    90deg,
+    #00c0ff 0%,
+    #ffcf00 49%,
+    #fc4f4f 80%,
+    #00c0ff 100%
+  );
 }
